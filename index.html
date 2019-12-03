@@ -21,7 +21,11 @@
         }
 
         #identify{
-            background-image: url(src/images/identify.jpg);
+            background-image: url("src/images/identify.jpg"); /* The image used */
+            background-color: #cccccc; /* Used if the image is unavailable */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */
         }
 
         .title{
@@ -42,11 +46,38 @@
 
         #identify  ul  li{
             text-align: center;
-            padding:15px 0;
+            padding: 15px 0;
+            border-bottom: 1px dashed #ad1357;
+            color: white;
+        }
+
+        #identify  ul  li:last-child{
+            border-bottom-width: 0;
+        }
+
+        #identify  ul  li:first-child{
+            padding: 0 0;
+            padding-bottom: 15px;
         }
 
         .clearfix{
             overflow: auto;
+        }
+
+        .column{
+            width: 50%;
+            float: left;
+            text-align: center;
+            text-align: center;
+        }
+
+        #vcs{
+            background-image: url("src/images/vcs-background.jpg"); /* The image used */
+            background-color: #cccccc; /* Used if the image is unavailable */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */
+            text-align: center;
         }
 
     </style>
@@ -72,18 +103,21 @@
 
 
     <div id="identify" class="step slide" data-x="-1000" data-y="-1500">
+
         <h1 class="title" style="text-align: center;">Version Control Systems & git</h1>
         <hr class="hr-line">
-
-        <p style="text-align: center;margin-top: 80px; margin-bottom: 20px;">Amin Vali</p>
         
-        <div style="text-align: center;">
+        <div style="margin-top:30px;" class="column">
+            <img style="display: inline-block;border-radius: 50%;margin-bottom: 10px;margin-top: 20px;" src="src/images/Amin.jpg" width="210px" height="210px" />
+            <p style="color:white;">Amin Vali</p>
+        </div>
+
+        <div style="margin-top:30px;" class="column">
                 <ul style="display: inline-block;" class="white-bordered clearfix">
-                    <li>Javagar</li>
-                    <li>Android programmer</li>
-                    <li>Little web eesigning</li>
-                    <li>Little of php</li>
-                
+                    <li>Java</li>
+                    <li>Android programming</li>
+                    <li>Little web designing</li>
+                    <li>Little of php programming</li>
                 </ul>
         </div>
         
@@ -94,8 +128,8 @@
 
 
 
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
+    <div id="vcs" class="step slide" data-x="0" data-y="-1500">
+            <p style="height: 100%;">Version Control Systems</p>
     </div>
 
     <div class="step slide" data-x="1000" data-y="-1500">
